@@ -3,11 +3,13 @@ const express = require('express');
 const parseurl = require('parseurl');
 const bodyParser = require('body-parser');
 const path = require('path');
-//const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
 const Question = require('./models/questions.js')
 const app = express();
 const url = process.env.MONGOLAB_URI;
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 // MONGOOSE CONNECT
@@ -20,9 +22,10 @@ mongoose.connect(url, function (err, db) {
 });
 
 
-// ROOT DIRECTORY
-app.get('/', function(req, res) {
-  res.json('you did it');
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 // GET ALL QUESTIONS
