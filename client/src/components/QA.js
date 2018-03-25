@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css'
+import Answers from './Answers.js'
 const axios = require('axios');
 
-//TODO put form in separate file form.js
 
 class QA extends React.Component {
   constructor(props) {
@@ -13,16 +13,8 @@ class QA extends React.Component {
     };
     this.handleName = this.handleName.bind(this);
     this.handleQuestion = this.handleQuestion.bind(this);
-    //this.handleChange = this.handleChange.bind(this);
   }
 
-  // handleChange(event) {
-  //  const name = event.target.name;
-  //  const value = event.target.value;
-  //  this.setState({
-  //     [name]: value
-  //   });
-  // }
   handleName(event) {
     this.setState({ name: event.target.value });
   }
@@ -37,7 +29,7 @@ class QA extends React.Component {
         question: event.target.value,
      });
 
-      axios.post('https://bryancito.herokuapp.com/api/signatures', {
+      axios.post('https://bryancito.herokuapp.com/api/questions', {
         name: this.state.name,
         question: this.state.question,
       })
@@ -72,7 +64,7 @@ class QA extends React.Component {
          </div>
          <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
       </form>
-
+      <Answers />
       </div>
     );
   }

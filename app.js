@@ -12,7 +12,7 @@ const url = process.env.MONGOLAB_URI;
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 
-// MONGOOSE CONNECT
+// mongoose connection
 mongoose.connect(url, function (err, db) {
  if (err) {
    console.log('Unable to connect to the mongoDB server. Error:', err);
@@ -24,18 +24,18 @@ mongoose.connect(url, function (err, db) {
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// });
 
-// GET ALL QUESTIONS
+// get all questions
 app.get('/api/questions', function(req, res) {
   Question.find({}).then(eachOne => {
     res.json(eachOne);
     })
   })
 
-// POST NEW QUEST
+// post new question
 app.post('/api/questions', function(req, res) {
   Question.create({
     name: req.body.name,
@@ -45,7 +45,7 @@ app.post('/api/questions', function(req, res) {
   });
 });
 
-// APP LISTENER
+// app listener
 const port = process.env.PORT || 5000;
 app.listen(port);
 

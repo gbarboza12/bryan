@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import Introduction from './Introduction.js'
 import Carousel from './Carousel.js'
 
