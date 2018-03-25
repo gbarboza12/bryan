@@ -1,0 +1,26 @@
+html, body {
+  background-color: #222;
+  color: white;
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0.3px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.container-fluid {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.demoForm {
+	width: 500px;
+	margin: auto;
+}

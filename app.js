@@ -1,4 +1,4 @@
-//====DEPENDENCIES===//
+// DEPENDENCIES
 const express = require('express');
 const parseurl = require('parseurl');
 const bodyParser = require('body-parser');
@@ -9,9 +9,8 @@ const Question = require('./models/questions.js')
 const app = express();
 const url = process.env.MONGOLAB_URI;
 
-//=========================//
 
-//====MONGOOSE CONNECT===//
+// MONGOOSE CONNECT
 mongoose.connect(url, function (err, db) {
  if (err) {
    console.log('Unable to connect to the mongoDB server. Error:', err);
@@ -19,21 +18,21 @@ mongoose.connect(url, function (err, db) {
    console.log('Connection established to', url);
  }
 });
-//==========================//
 
-//====ROOT DIRECTORY===//
+
+// ROOT DIRECTORY
 app.get('/', function(req, res) {
   res.json('you did it');
 });
-//==========================//
-//====GET ALL QUESTIONS===//
+
+// GET ALL QUESTIONS
 app.get('/api/questions', function(req, res) {
   Question.find({}).then(eachOne => {
     res.json(eachOne);
     })
   })
-//==========================//
-//====POST NEW QUEST===//
+
+// POST NEW QUEST
 app.post('/api/questions', function(req, res) {
   Question.create({
     name: req.body.name,
@@ -42,12 +41,11 @@ app.post('/api/questions', function(req, res) {
     res.json(question)
   });
 });
-//==========================//
 
-//====APP LISTEN ON ENVIRONMENT PORT===//
+// APP LISTENER
+const port = process.env.PORT || 5000;
+app.listen(port);
 
-app.listen(process.env.PORT || 3000);
-console.log('Starting applicaiton...');
+console.log(`QA listening on ${port}`);
 
-//==========================//
 //export MONGOLAB_URI="mongodb://admin:pass@ds123619.mlab.com:23619/questions";
