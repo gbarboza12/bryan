@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
 //==========================//
 //====GET ALL QUESTIONS===//
 app.get('/api/questions', function(req, res) {
-  Signature.find({}).then(eachOne => {
+  Question.find({}).then(eachOne => {
     res.json(eachOne);
     })
   })
@@ -36,8 +36,8 @@ app.get('/api/questions', function(req, res) {
 //====POST NEW QUEST===//
 app.post('/api/questions', function(req, res) {
   Question.create({
-    name: req.body.NameOfGuest,
-    message: req.body.MessageofGuest,
+    name: req.body.name,
+    message: req.body.question,
 }).then(question => {
     res.json(question)
   });
@@ -47,6 +47,7 @@ app.post('/api/questions', function(req, res) {
 //====APP LISTEN ON ENVIRONMENT PORT===//
 
 app.listen(process.env.PORT || 3000);
-console.log('starting applicaiton.  Good job!');
+console.log('Starting applicaiton...');
 
 //==========================//
+//export MONGOLAB_URI="mongodb://admin:pass@ds123619.mlab.com:23619/questions";
