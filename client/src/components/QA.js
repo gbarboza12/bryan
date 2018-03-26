@@ -23,6 +23,8 @@ class QA extends React.Component {
   }
 
   addToQA = event => {
+     alert("Question submitted!");
+
      event.preventDefault();
      this.setState({
         name: event.target.value,
@@ -32,17 +34,29 @@ class QA extends React.Component {
       axios.post('https://bryancito.herokuapp.com/api/questions', {
         name: this.state.name,
         question: this.state.question,
+     }, { headers: {
+    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'Access-Control-Allow-Origin': '*'}
       })
       .then(response => {
-        console.log(response, 'Question added!');
+        alert(response, 'Question added!');
       })
-      .catch(err => {
-        console.log(err, 'Question not added, try again');
-      });
+      .catch(function (error) {
+                if (error.response) {
+                    alert('Error data : ', error.response.data);
+                    alert('Error status : ', error.response.status);
+                    alert('Error headers : ', error.response.headers);
+                } else if (error.request) {
+                    alert('Error request : ', error.request);
+                } else {
+                    alert('Error message : ', error.message);
+                }
+                console.log(error.config);
+            });
 
       this.setState({
-        SignatureOfGuest: "",
-        MessageofGuest: "",
+        name: "",
+        question: "",
       });
   };
 
@@ -51,21 +65,25 @@ class QA extends React.Component {
       <div class="container-fluid text-center">
       <p>Feel free to ask me any question. If I have time, I will ask my
       publicist to answer it. </p>
-      <form className="demoForm" onSubmit={this.handleSubmit}>
+      <form className="demoForm">
          <div className='form-group'>
            <label htmlFor="name">Name</label>
-           <input type="text" required className="form-control" placeholder="Name"
-            value={this.state.value} onChange={this.handleName} />
+           <input type="text" name="name" required className="form-control" placeholder="Name"
+            value={this.state.name} onChange={this.handleName} />
          </div>
+
          <div className={`form-group`}>
            <label htmlFor="question">Question</label>
-           <textarea type="text" required className="form-control" placeholder="Question"
-             value={this.state.value} onChange={this.handleQuestion}/>
+           <textarea type="text" name="question" required className="form-control" placeholder="Question"
+             value={this.state.question} onChange={this.handleQuestion}/>
          </div>
+
          <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
       </form>
       <Answers />
       </div>
+
+
     );
   }
 }

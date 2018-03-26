@@ -14,7 +14,7 @@ class Answers extends React.Component {
   render() {
     return (
       <div>
-        <a href="#" onClick={() => this.setState({ open: !this.state.open })}>
+        <a href="" onClick={() => this.setState({ open: !this.state.open })}>
           Click to see questions that I have already answered.
         </a>
         <Fade in={this.state.open}>
