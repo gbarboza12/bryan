@@ -34,10 +34,7 @@ class QA extends React.Component {
       axios.post('https://bryancito.herokuapp.com/api/questions', {
         name: this.state.name,
         question: this.state.question,
-     }, { headers: {
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Access-Control-Allow-Origin': '*'}
-      })
+     })
       .then(response => {
         alert(response, 'Question added!');
       })
