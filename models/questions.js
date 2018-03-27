@@ -4,8 +4,7 @@ let Schema = mongoose.Schema;
 
 const questionsSchema = new Schema({
   name: String,
-  question: String
-  },
+  message: String,
 })
 
 const Question = mongoose.model('Question', questionsSchema);
