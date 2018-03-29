@@ -1,13 +1,15 @@
-import React from 'react';
-import Introduction from './Introduction.js'
-import Carousel from './Carousel.js'
+import React, { Component } from 'react';
 
-//TODO merge carousel and Introduction
-
-const Home = () => (
-   <div class="container-fluid text-center">
-   <Carousel />
-   <Introduction />
-   </div>
-)
+class Home extends Component {
+  render() {
+    return (
+      <div class="content">
+      Hello, my name is Bryancito Barbarosa, but you probably know me as
+      Bryan&trade;.
+      I am a world–renowned model, entrepreneur, socialite, activist, father of
+      thousands of Bryancitos, yogi, nobel laurete -- in that order.
+      </div>
+    );
+  }
+}
 export default Home;

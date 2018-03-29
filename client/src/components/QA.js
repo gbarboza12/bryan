@@ -59,7 +59,7 @@ class QA extends React.Component {
 
   render() {
     return (
-      <div class="container-fluid text-center">
+      <div class="container-fluid">
       <p>Feel free to ask me any question. If I have time, I will ask my
       publicist to answer it. </p>
       <form className="demoForm">

@@ -26,7 +26,7 @@ class Carousel extends Component{
       centerPadding: '0px'
     }
     return (
-      <div class="container-fluid">
+      <div class="carousel">
          <div id="myCarousel" class="Carousel-body sc" data-ride="carousel">
            <Slider {...settings}>
              <div><img class="img-responsive" src={bryan1} alt="bryan"/></div>
