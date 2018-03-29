@@ -1,0 +1,33 @@
+.demoForm {
+	width: 500px;
+	margin: auto;
+}
+
+.panel-group {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.panel-heading{
+   background-color: #A1C3D1;
+   color: white;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #F172A1;
+}
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    float: right;
+}

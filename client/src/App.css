@@ -1,7 +1,7 @@
 html, body {
-  background-color: #222;
-  color: white;
-  font-family: Helvetica;
+  background-color: #A1C3D1;
+  color: #F0EBF4;
+  font-family: 'Roboto Mono', monospace;;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -20,7 +20,11 @@ html, body {
     padding-bottom: 20px;
 }
 
-.demoForm {
-	width: 500px;
-	margin: auto;
+a {
+  color: #E64398;
+  text-decoration: none;
+}
+a:hover {
+  color: #E64398;
+  text-decoration: underline;
 }

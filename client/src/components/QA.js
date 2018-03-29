@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css'
+import '../QA.css'
 import Answers from './Answers.js'
 const axios = require('axios');
 
