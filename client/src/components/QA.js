@@ -59,28 +59,30 @@ class QA extends React.Component {
 
   render() {
     return (
-      <div class="container-fluid">
-      <p>Feel free to ask me any question. If I have time, I will ask my
-      publicist to answer it. </p>
-      <form className="demoForm">
-         <div className='form-group'>
-           <label htmlFor="name">Name</label>
-           <input type="text" name="name" required className="form-control" placeholder="Name"
-            value={this.state.name} onChange={this.handleName} />
-         </div>
+      <div class="content">
+         Feel free to ask me any question. If I have time, I will ask my
+         publicist to answer it.
 
-         <div className={`form-group`}>
-           <label htmlFor="question">Question</label>
-           <textarea type="text" name="question" required className="form-control" placeholder="Question"
-             value={this.state.question} onChange={this.handleQuestion}/>
-         </div>
+         <div class="form">
+            <form className="demoForm">
+               <div className='form-group'>
+                 <label htmlFor="name">Name</label>
+                 <input type="text" name="name" required className="form-control" placeholder="Name"
+                  value={this.state.name} onChange={this.handleName} />
+               </div>
 
-         <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
-      </form>
-      <Answers />
+               <div className={`form-group`}>
+                 <label htmlFor="question">Question</label>
+                 <textarea type="text" name="question" required className="form-control" placeholder="Question"
+                   value={this.state.question} onChange={this.handleQuestion}/>
+               </div>
+
+               <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
+            </form>
+         </div>
+         
+         <Answers />
       </div>
-
-
     );
   }
 }

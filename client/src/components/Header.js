@@ -6,14 +6,17 @@ const Header = () => (
    <header>
    <div class="header">
     <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/QA'>Q&A</Link></li>
-      </ul>
+      <div class="navigation">
+         <ul>
+           <li><Link to='/'>Home</Link></li>
+           <li><Link to='/Family'>My Family</Link></li>
+           <li><Link to='/QA'>Q&A</Link></li>
+         </ul>
+      </div>
     </nav>
     <Carousel />
     </div>
-    </header>
+  </header>
 )
 
 export default Header

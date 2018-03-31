@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from 'react-slick'
 import bryan1 from '../images/bryan1.jpg';
 import bryan2 from '../images/bryan2.jpg';
@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
     ></div>
   );
 }
-class Carousel extends Component{
+class Carousel extends React.Component {
    render() {
     var settings = {
       dots: true,

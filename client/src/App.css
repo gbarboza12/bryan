@@ -4,32 +4,60 @@ html, body {
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 0.3px;
 }
-.content {
-   max-width: 800px;
-   display: flex;
-   justify-content: center;
-   padding-top: 40px;
-   padding-bottom: 20px;
-}
 
 .header {
-   padding-right: 15px;
-   padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.container-fluid {
-    padding-top: 40px;
-    padding-bottom: 20px;
+.navigation {
+  width: 100%;
+  z-index: 2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.navigation ul li {
+  display: inline-block;
+}
+.navigation a {
+  padding: 10px 40px;
+  margin: 0 10px;
 }
 
-a {
+@media (max-width: 700px){
+.navigation a  {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 20px;
+}
+}
+.content {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+a:link, a:visited {
   color: #E64398;
   text-decoration: none;
 }
-a:hover {
+a:hover, a:active {
   color: #E64398;
   text-decoration: underline;
+}
+
+.footer{
+  text-align: center;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+.wrapper{
+  display: block;
+  padding: 20px;
+  height: 60px;
+  width: 100%;
 }
