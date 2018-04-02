@@ -1,3 +1,6 @@
+.carousel{
+  padding-bottom: 20px;
+}
 .slick-slide {
    height:auto !important;
 }

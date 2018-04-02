@@ -12,10 +12,11 @@ html, body {
 
 .navigation {
   width: 100%;
-  z-index: 2;
+  z-index: 1000;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+   top: 0px;
 }
 .navigation ul li {
   display: inline-block;
@@ -24,12 +25,18 @@ html, body {
   padding: 10px 40px;
   margin: 0 10px;
 }
+.navigation a :first-child {
+  padding-left:  0px;
+}
 
 @media (max-width: 700px){
 .navigation a  {
   font-size: 16px;
   margin: 0;
   padding: 10px 20px;
+}
+.navigation a :first-child {
+  padding-left:  0px;
 }
 }
 .content {
@@ -47,7 +54,7 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
-.footer{
+.footer {
   text-align: center;
   padding: 20px;
   left: 0;
@@ -55,9 +62,57 @@ a:hover, a:active {
   height: 60px;
   width: 100%;
 }
-.wrapper{
+.wrapper {
   display: block;
   padding: 20px;
   height: 60px;
   width: 100%;
+}
+.mom {
+  display: block;
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+}
+.family_pic {
+  max-width: 400px;
+  overflow: visible;
+  margin: 0;
+  text-align: center;
+}
+.family_pic img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.family_caption{
+  width: 80%;
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+@media screen and (max-width: 700px) {
+  .mom {
+    display: block;
+    padding-left: 30px;
+  }
+  .family_caption{
+    width: 100%;
+    font-size: 12px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .family_pic img {
+    width: 70%;
+    vertical-align: bottom;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+}
+
+figure {
+  display: flex;
+  align-items: center;
 }
