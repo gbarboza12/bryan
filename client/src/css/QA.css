@@ -1,0 +1,50 @@
+.demoForm {
+	width: 300px;
+	margin: auto;
+}
+.answers {
+	padding-top: 50px;
+}
+.panel-group {
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+.panel-heading{
+	background-color: #A1C3D1;
+	color: white;
+}
+.panel-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	color: #F172A1;
+}
+.panel-heading .accordion-toggle:after {
+	/* symbol for "opening" panels */
+	font-family: 'Glyphicons Halflings';
+	content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+	float: right;
+	color: #F172A1;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+	/* symbol for "collapsed" panels */
+	content: "\e080";
+}
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+	border-top: 0;
+}
+.answers a:hover, a:active {
+  text-decoration: none;
+}
+.q-sign {
+	font-size: 20px;
+	color: blue;
+}
+.question-text {
+	font-size: 14px;
+	color: #F0EBF4;
+}
+.name-text {
+	text-align: right;
+	font-family: 'Dancing Script', cursive;
+}

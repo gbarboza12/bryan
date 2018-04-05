@@ -1,0 +1,40 @@
+.family {
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+}
+.family_pic {
+  max-width: 400px;
+}
+.family_caption {
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 5px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+.family_caption h2, .h2 {
+  margin-top: 0px;
+}
+@media (max-width: 768px) {
+  .family {
+    display: block;
+  }
+  .family_pic {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .family_caption{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+  .family_pic img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding-bottom: 10px;
+  }
+}

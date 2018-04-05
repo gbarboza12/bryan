@@ -1,7 +1,7 @@
 html, body {
   background-color: #A1C3D1;
   color: #F0EBF4;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 0.3px;
 }
 
@@ -15,6 +15,7 @@ html, body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-size: 20px;
 }
 .navigation ul li {
   display: inline-block;
@@ -62,40 +63,8 @@ a:hover, a:active {
   height: 60px;
   width: 100%;
 }
-.mom {
-  margin-bottom: 60px;
-  width: 100%;
-  display: flex;
-}
-.family_pic {
-  max-width: 400px;
-}
-.family_caption {
-  text-align: left;
-  box-sizing: border-box;
-  padding-right: 5px;
-  padding-left: 15px;
-  font-size: 14px;
-}
-@media (max-width: 768px) {
-  .mom {
-    display: block;
-  }
-  .family_pic {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .family_caption{
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-  }
-  .family_pic img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    padding-bottom: 10px;
-  }
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

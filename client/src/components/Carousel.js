@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import bryan1 from '../images/bryan1.jpg';
 import bryan2 from '../images/bryan2.jpg';
 import bryan3 from '../images/bryan3.jpg';
-import '../Carousel.css';
+import '../css/Carousel.css';
 
 function SampleNextArrow(props) {
   const {className, style, onClick} = props
@@ -34,6 +34,7 @@ class Carousel extends React.Component {
              <div><img class="img-responsive" src={bryan3} alt="bryan"/></div>
            </Slider>
           </div>
+          <hr class="style-two" />
       </div>
     );
   }

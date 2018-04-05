@@ -1,5 +1,5 @@
 import React from 'react';
-import '../QA.css'
+import '../css/QA.css'
 import Answers from './Answers.js'
 const axios = require('axios');
 
@@ -80,7 +80,7 @@ class QA extends React.Component {
                <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
             </form>
          </div>
-         
+
          <Answers />
       </div>
     );
