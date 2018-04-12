@@ -25,13 +25,6 @@ mongoose.connect(url, function (err, db) {
 });
 
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
-
-
 // get all questions
 app.get('/api/questions', cors(), function(req, res) {
   Question.find({}).then(eachOne => {
@@ -44,6 +37,7 @@ app.post('/api/questions', cors(), function(req, res) {
   Question.create({
     name: req.body.name,
     message: req.body.question,
+    answer: req.body.answer
 }).then(question => {
     res.json(question)
   });

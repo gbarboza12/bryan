@@ -9,7 +9,8 @@ class QA extends React.Component {
     super(props);
     this.state = {
       name: '',
-      question: ''
+      question: '',
+      answer: ''
     };
     this.handleName = this.handleName.bind(this);
     this.handleQuestion = this.handleQuestion.bind(this);
@@ -34,6 +35,7 @@ class QA extends React.Component {
       axios.post('https://bryancito.herokuapp.com/api/questions', {
         name: this.state.name,
         question: this.state.question,
+        answer: this.state.answer
      })
       .then(response => {
         alert(response, 'Question added!');
