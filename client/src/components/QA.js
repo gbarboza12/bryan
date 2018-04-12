@@ -62,8 +62,10 @@ class QA extends React.Component {
   render() {
     return (
       <div class="content">
+        <div class="question-content">
          Feel free to ask me any question. If I have time, I will ask my
          publicist to answer it.
+         </div>
 
          <div class="form">
             <form className="demoForm">

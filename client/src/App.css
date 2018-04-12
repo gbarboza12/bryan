@@ -20,6 +20,9 @@ html, body {
 .navigation ul li {
   display: inline-block;
 }
+.navigation ul li :first-child {
+  padding-left:  0px;
+}
 .navigation a {
   padding: 10px 40px;
   margin: 0 10px;
@@ -30,13 +33,12 @@ html, body {
     font-size: 16px;
     margin: 0;
   }
-  .navigation ul li :first-child {
-    padding-left:  0px;
-  }
+
 }
 .content {
   padding: 20px;
-  margin: 0 auto;
+  margin-left: auto;
+	margin-right: auto;
   max-width: 800px;
 }
 

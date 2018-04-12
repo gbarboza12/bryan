@@ -17,14 +17,19 @@ class Answers extends React.Component {
   }).then(data => {
       let messages =
       data.map((msg) => {
+        var answer="";
+        if(msg.answer === "") {
+          answer="This question has not been answered.";
+        } else {
+          answer = msg.answer;
+        }
         return(
           <div class="qa-block" key={msg.results}>
             <span class="q-sign">Q: </span>
             <span class="question-text">{msg.message}</span>
             <h4 class="name-text">-{msg.name}</h4>
             <span class="a-sign">A: </span>
-            if(msg.answer === "")
-              <span class="question-text">This question has not been answered.</span>
+            <span class="question-text">{answer}</span>
 
           </div>
         )
