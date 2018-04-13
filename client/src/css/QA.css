@@ -63,3 +63,48 @@
 	font-size: 20px;
 	color: #ffdbdb;
 }
+.btn-qa {
+  color: #ffffff;
+  background-color: #B39BC8;
+  border-color: #B39BC8;
+}
+
+.btn-qa:hover,
+.btn-qa:focus,
+.btn-qa:active,
+.btn-qa.active,
+.open .dropdown-toggle.btn-qa {
+  color: #ffffff;
+  background-color: #49247A;
+  border-color: #B39BC8;
+}
+
+.btn-qa:active,
+.btn-qa.active,
+.open .dropdown-toggle.btn-qa {
+  background-image: none;
+}
+
+.btn-qa.disabled,
+.btn-qa[disabled],
+fieldset[disabled] .btn-qa,
+.btn-qa.disabled:hover,
+.btn-qa[disabled]:hover,
+fieldset[disabled] .btn-qa:hover,
+.btn-qa.disabled:focus,
+.btn-qa[disabled]:focus,
+fieldset[disabled] .btn-qa:focus,
+.btn-qa.disabled:active,
+.btn-qa[disabled]:active,
+fieldset[disabled] .btn-qa:active,
+.btn-qa.disabled.active,
+.btn-qa[disabled].active,
+fieldset[disabled] .btn-qa.active {
+  background-color: #B39BC8;
+  border-color: #B39BC8;
+}
+
+.btn-qa .badge {
+  color: #B39BC8;
+  background-color: #ffffff;
+}

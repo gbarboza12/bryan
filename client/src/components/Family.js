@@ -1,6 +1,7 @@
 import React from 'react';
 import mom from '../images/mom.jpg';
 import chiq from '../images/chiq.jpg';
+import bruce from '../images/bruce.jpg';
 import '../css/Family.css';
 
 class Family extends React.Component {
@@ -40,6 +41,18 @@ class Family extends React.Component {
             trouble for stealing food off the kitchen counters, he is the most kind
             and loyal dog I have ever met. He protects me during thunderstorms and he
             keeps other dogs and people away when they try to approach me. I love him.
+          </figcaption>
+       </div>
+
+       <div class="family">
+         <figure class="family_pic">
+           <img src={bruce} alt="My step brother" />
+         </figure>
+         <figcaption class="family_caption">
+           <h2>Bruce</h2>
+            This is my step brother, Bruce. He aspires to be just like me. He goes crazy
+            every time he sees another dog, so I can only stand small doses of him.
+            Maybe if he learns how to control himself I will teach him my ways.
           </figcaption>
        </div>
 

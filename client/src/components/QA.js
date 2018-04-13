@@ -38,17 +38,17 @@ class QA extends React.Component {
         answer: this.state.answer
      })
       .then(response => {
-        alert(response, 'Question added!');
+        console.log(response, 'Question added!');
       })
       .catch(function (error) {
                 if (error.response) {
-                    alert('Error data : ', error.response.data);
-                    alert('Error status : ', error.response.status);
-                    alert('Error headers : ', error.response.headers);
+                    console.log('Error data : ', error.response.data);
+                    console.log('Error status : ', error.response.status);
+                    console.log('Error headers : ', error.response.headers);
                 } else if (error.request) {
-                    alert('Error request : ', error.request);
+                    console.log('Error request : ', error.request);
                 } else {
-                    alert('Error message : ', error.message);
+                    console.log('Error message : ', error.message);
                 }
                 console.log(error.config);
             });
@@ -70,18 +70,16 @@ class QA extends React.Component {
          <div class="form">
             <form className="demoForm">
                <div className='form-group'>
-                 <label htmlFor="name">Name</label>
                  <input type="text" name="name" required className="form-control" placeholder="Name"
                   value={this.state.name} onChange={this.handleName} />
                </div>
 
                <div className={`form-group`}>
-                 <label htmlFor="question">Question</label>
                  <textarea type="text" name="question" required className="form-control" placeholder="Question"
                    value={this.state.question} onChange={this.handleQuestion}/>
                </div>
 
-               <button type="submit" className="btn btn-primary" onClick={this.addToQA}>Submit</button>
+               <button type="submit" className="btn btn-qa btn-block" onClick={this.addToQA}>Submit</button>
             </form>
          </div>
 
